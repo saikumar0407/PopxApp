@@ -1,119 +1,128 @@
 # PopX Mobile App
 
-A mobile-first React application that replicates the PopX app design. Built with Vite, React Router DOM, and plain CSS.
+A responsive React application built by recreating the provided PopX mobile app design. The project focuses on clean UI implementation, smooth navigation, reusable components, and a mobile-first user experience.
 
-## Tech Stack
+## Overview
 
-- React (Vite)
+This application consists of four screens:
+
+- Welcome Screen
+- Login Screen
+- Create Account Screen
+- Account Settings Screen
+
+The design has been implemented with attention to spacing, typography, colors, and overall user experience to closely match the provided mockups.
+
+## Technologies Used
+
+- React JS
+- Vite
 - React Router DOM
-- Plain CSS (no UI libraries)
-- Functional Components & React Hooks
+- CSS3
+- JavaScript (ES6+)
 
 ## Features
 
-- **Welcome Page** (`/`) — Landing screen with navigation to register or login
-- **Login Page** (`/login`) — Email/password form with disabled state validation
-- **Register Page** (`/register`) — Full registration form with required field validation
-- **Account Settings** (`/account`) — Profile card with user info and bio
+### Welcome Screen
 
-## Installation
+- Entry point of the application
+- Navigation to Login and Create Account screens
 
-1. Navigate to the project directory:
+### Login Screen
 
-```bash
-cd popx-app
-```
+- Email and Password fields
+- Basic form validation
+- Login button enabled only when required fields are filled
 
-2. Install dependencies:
+### Create Account Screen
 
-```bash
-npm install
-```
+- User registration form
+- Required field validation
+- Agency selection using radio buttons
+- Navigation to Account Settings after successful submission
 
-## Run the Project
+### Account Settings Screen
 
-Start the development server:
-
-```bash
-npm run dev
-```
-
-Open the URL shown in the terminal (typically `http://localhost:5173`) in your browser.
-
-## Build for Production
-
-```bash
-npm run build
-```
-
-Preview the production build:
-
-```bash
-npm run preview
-```
+- User profile information
+- Profile image with edit icon
+- User details and description section
 
 ## Project Structure
 
-```
+```text
 src/
+├── components/
+│   ├── Button.jsx
+│   ├── InputField.jsx
+│   └── MobileLayout.jsx
+│
 ├── pages/
 │   ├── Welcome.jsx
 │   ├── Login.jsx
 │   ├── Register.jsx
 │   └── AccountSettings.jsx
-├── components/
-│   ├── MobileLayout.jsx
-│   ├── InputField.jsx
-│   └── Button.jsx
+│
 ├── styles/
 │   ├── global.css
 │   ├── welcome.css
 │   ├── login.css
 │   ├── register.css
 │   └── account.css
+│
 ├── assets/
 ├── App.jsx
 └── main.jsx
 ```
 
-## Routes
+## Getting Started
 
-| Route       | Page              |
-|-------------|-------------------|
-| `/`         | Welcome           |
-| `/login`    | Login             |
-| `/register` | Create Account    |
-| `/account`  | Account Settings  |
-
-## Deploy to Vercel
-
-The project includes a `vercel.json` so React Router routes work in production.
-
-### Option 1: Vercel CLI (fastest)
-
-1. Log in to Vercel (opens browser):
+### Install Dependencies
 
 ```bash
-cd popx-app
-npx vercel login
+npm install
 ```
 
-2. Deploy to production:
+### Run the Application
+
+```bash
+npm run dev
+```
+
+The application will start on the local development server. Open the URL displayed in the terminal to view the project.
+
+### Production Build
+
+```bash
+npm run build
+```
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+## Routing
+
+| Route     | Description             |
+| --------- | ----------------------- |
+| /         | Welcome Screen          |
+| /login    | Login Screen            |
+| /register | Create Account Screen   |
+| /account  | Account Settings Screen |
+
+## Deployment
+
+The project is deployed using Vercel and supports React Router navigation in production.
+
+### Deploy Using Vercel
 
 ```bash
 npx vercel --prod
 ```
 
-Vercel auto-detects Vite. Default settings:
+Alternatively, connect the GitHub repository to Vercel and deploy directly through the Vercel dashboard.
 
-- **Build Command:** `npm run build`
-- **Output Directory:** `dist`
+## Author
 
-### Option 2: GitHub + Vercel Dashboard
-
-1. Push the project to a GitHub repository.
-2. Go to [vercel.com/new](https://vercel.com/new).
-3. Import your repository.
-4. Keep the default Vite settings and click **Deploy**.
-
-Every push to `main` will trigger a new deployment automatically.
+Developed as part of a React JS UI implementation assignment, focusing on clean code structure, reusable components, responsive design, and seamless user navigation.
