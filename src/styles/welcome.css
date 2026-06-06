@@ -1,0 +1,37 @@
+.welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 100vh;
+  padding: 24px 20px 32px;
+}
+
+.welcome__content {
+  margin-bottom: 40px;
+}
+
+.welcome__title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--color-text);
+  margin-bottom: 10px;
+}
+
+.welcome__description {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+}
+
+.welcome__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.welcome__actions .btn--secondary {
+  background-color: #CEBAFB;
+  color: var(--color-text);
+}
